@@ -38,18 +38,18 @@ public class FakeStoreProductClient {
         return List.of(productsResponse.getBody());
     }
 
-    public FakeStoreProductResponseDto addProduct(FakeStoreProductRequestDto){
+    public FakeStoreProductResponseDto addProduct(FakeStoreProductRequestDto fakeStoreProductRequestDto){
         String productsUrl=fakeStoreUrl+fakeStorePathProducts;
         RestTemplate restTemplate=restTemplateBuilder.build();
-        ResponseEntity<FakeStoreProductResponseDto> productResponse=restTemplate.postForEntity(productsUrl,FakeStoreProductRequestDto, FakeStoreProductResponseDto.class);
+        ResponseEntity<FakeStoreProductResponseDto> productResponse=restTemplate.postForEntity(productsUrl,fakeStoreProductRequestDto, FakeStoreProductResponseDto.class);
         return productResponse.getBody();
     }
 
-    public FakeStoreProductResponseDto updateProduct(FakeStoreProductRequestDto fakeStoreProductRequestDto){
-        String productsUrl=fakeStoreUrl+fakeStorePathProducts;
-        RestTemplate restTemplate=restTemplateBuilder.build();
-        ResponseEntity<FakeStoreProductResponseDto> response=restTemplate.patchForObject(productsUrl,FakeStoreProductRequestDto, FakeStoreProductResponseDto.class);
-        return response.getBody();
-    }
+//    public FakeStoreProductResponseDto updateProduct(FakeStoreProductRequestDto fakeStoreProductRequestDto){
+//        String productsUrl=fakeStoreUrl+fakeStorePathProducts;
+//        RestTemplate restTemplate=restTemplateBuilder.build();
+//        ResponseEntity<FakeStoreProductResponseDto> response=restTemplate.patchForObject(productsUrl,fakeStoreProductRequestDto, FakeStoreProductResponseDto.class);
+//        return response.getBody();
+//    }
 
 }

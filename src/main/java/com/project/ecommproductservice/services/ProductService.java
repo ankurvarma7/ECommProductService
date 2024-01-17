@@ -10,4 +10,5 @@ public interface ProductService {
     public List<ProductServiceResponseDto> getProducts();
     public ProductServiceResponseDto addProduct(ProductServiceRequestDto productServiceRequestDto);
     public ProductServiceResponseDto updateProduct(ProductServiceRequestDto productServiceRequestDto);
+    public boolean deleteProduct(ProductServiceRequestDto productServiceRequestDto);
 }

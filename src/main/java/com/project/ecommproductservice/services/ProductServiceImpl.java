@@ -27,4 +27,9 @@ public class ProductServiceImpl implements ProductService{
     public ProductServiceResponseDto updateProduct(ProductServiceRequestDto productServiceRequestDto) {
         return null;
     }
+
+    @Override
+    public boolean deleteProduct(ProductServiceRequestDto productServiceRequestDto) {
+        return false;
+    }
 }
