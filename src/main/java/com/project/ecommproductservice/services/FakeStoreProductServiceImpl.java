@@ -25,7 +25,7 @@ public class FakeStoreProductServiceImpl implements ProductService{
     }
     @Override
     public ProductServiceResponseDto getProductById(int id) {
-        FakeStoreProductResponseDto fakeStoreProductResponseDto=fakeStoreProductClient.getProductbyId(id);
+        FakeStoreProductResponseDto fakeStoreProductResponseDto=fakeStoreProductClient.getProductById(id);
         if(isNull(fakeStoreProductResponseDto)){
             throw new ProductNotFoundException("Product Not Found!!");
         }

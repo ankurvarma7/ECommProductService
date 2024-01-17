@@ -24,7 +24,7 @@ public class FakeStoreProductClient {
         this.fakeStorePathCategory = fakeStorePathCategory;
     }
 
-    public FakeStoreProductResponseDto getProductbyId(int id){
+    public FakeStoreProductResponseDto getProductById(int id){
         String productUrl=fakeStoreUrl+fakeStorePathProducts+"/"+id;
         RestTemplate restTemplate=restTemplateBuilder.build();
         ResponseEntity<FakeStoreProductResponseDto> productResponse=restTemplate.getForEntity(productUrl, FakeStoreProductResponseDto.class);

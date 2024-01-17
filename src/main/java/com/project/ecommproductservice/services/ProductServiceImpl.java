@@ -32,4 +32,8 @@ public class ProductServiceImpl implements ProductService{
     public boolean deleteProduct(ProductServiceRequestDto productServiceRequestDto) {
         return false;
     }
+
+    public void initialize(){
+
+    }
 }
